@@ -11,7 +11,7 @@ define('Workerman', true);
 Adapterman::init();
 $http_worker = new Worker('http://127.0.0.1:7010');
 $http_worker->count = getenv('WEBMAN_WORKERS') ?: max(swoole_cpu_num(), 2);
-$http_worker->name = 'Xboard';
+$http_worker->name = '私人专属';
 $http_worker->onWorkerStart = static function () {
     require __DIR__ . '/start.php';
 };
